@@ -10,7 +10,6 @@ except Exception:
     pass
 
 from retrieval.vector_store import initialize_vector_store
-from chains.rag_chain import get_agentic_answer
 
 
 # --------------------------------------------------
@@ -30,6 +29,8 @@ def initialize_database():
 
 
 initialize_database()
+
+from chains.rag_chain import get_agentic_answer
 
 
 # --------------------------------------------------
