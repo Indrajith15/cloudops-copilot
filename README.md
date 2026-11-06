@@ -11,6 +11,9 @@ CloudOps Copilot helps developers troubleshoot cloud infrastructure issues by re
 
 Ask cloud troubleshooting questions and get AI-generated answers grounded in documentation, with retrieved sources.
 
+<img width="1905" height="912" alt="Screenshot 2026-11-06 133759" src="https://github.com/user-attachments/assets/ba13bb7e-2921-48df-ae63-4c6870c5fe87" />
+
+
 
 ## ✨ Features
 
