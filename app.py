@@ -24,6 +24,13 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+@st.cache_resource
+def initialize_database():
+    return initialize_vector_store()
+
+
+initialize_database()
+
 
 # --------------------------------------------------
 # CUSTOM STYLING
