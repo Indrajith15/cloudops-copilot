@@ -1,5 +1,15 @@
 
+import os
 import streamlit as st
+
+# Load deployment secrets before importing backend modules
+try:
+    if "GOOGLE_API_KEY" in st.secrets:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+except Exception:
+    pass
+
+from retrieval.vector_store import initialize_vector_store
 from chains.rag_chain import get_agentic_answer
 
 
