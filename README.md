@@ -5,6 +5,13 @@
 
 CloudOps Copilot helps developers troubleshoot cloud infrastructure issues by retrieving relevant technical documentation, evaluating retrieved information and generating context-grounded troubleshooting guidance.
 
+## 🚀 Live Demo
+
+**Try CloudOps Copilot:** https://cloudops-copilot.streamlit.app/
+
+Ask cloud troubleshooting questions and get AI-generated answers grounded in documentation, with retrieved sources.
+
+
 ## ✨ Features
 
 - **Document Ingestion:** Load, split and process cloud troubleshooting documentation.
