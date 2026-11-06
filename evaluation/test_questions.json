@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Why is my Cloud Run service returning 503 errors?",
+        "expected_topic": "HTTP 503 errors",
+        "expected_result": "Relevant documentation should be retrieved."
+    },
+    {
+        "question": "Why is my Cloud Run container failing to start?",
+        "expected_topic": "Container startup failures",
+        "expected_result": "Startup troubleshooting documentation should be retrieved."
+    },
+    {
+        "question": "Why is my Cloud Run service running out of memory?",
+        "expected_topic": "Memory issues",
+        "expected_result": "Memory troubleshooting documentation should be retrieved."
+    },
+    {
+        "question": "What is the monthly cost of running an EC2 instance?",
+        "expected_topic": "Unsupported topic",
+        "expected_result": "The assistant should not invent an answer from unrelated documentation."
+    }
+]

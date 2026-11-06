@@ -1,0 +1,54 @@
+Google Cloud Run Troubleshooting Guide
+
+1. HTTP 503 Errors
+
+A 503 Service Unavailable error in Cloud Run can occur when a
+container fails to start, becomes unavailable, or cannot handle
+incoming requests.
+
+Common causes include:
+- Container startup failures.
+- Application crashes.
+- Insufficient container resources.
+- Requests exceeding configured concurrency.
+- Incorrect application configuration.
+
+Troubleshooting steps:
+- Inspect Cloud Run logs.
+- Check container startup errors.
+- Verify the application listens on the PORT environment variable.
+- Review CPU and memory allocation.
+- Check the configured concurrency.
+
+2. Container Startup Failures
+
+Cloud Run containers must start successfully and listen on the
+port provided through the PORT environment variable.
+
+Common causes:
+- Application listens on the wrong port.
+- Missing environment variables.
+- Incorrect container startup command.
+- Application crashes during initialization.
+
+Troubleshooting:
+- Inspect startup logs.
+- Verify the PORT environment variable.
+- Check application dependencies.
+- Test the container locally.
+
+3. Memory Issues
+
+A Cloud Run instance can fail when its application exceeds the
+allocated memory limit.
+
+Symptoms may include:
+- Container termination.
+- Unexpected restarts.
+- Failed requests.
+
+Troubleshooting:
+- Review memory usage.
+- Inspect container logs.
+- Optimize memory-intensive operations.
+- Increase allocated memory if necessary.
