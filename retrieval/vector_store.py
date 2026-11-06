@@ -2,6 +2,36 @@ import os
 from dotenv import load_dotenv
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from ingestion.embeddings import create_embeddings
+
+
+def initialize_vector_store():
+
+    # Generate document embeddings
+    chunks, vectors = create_embeddings()
+
+    # Connect to ChromaDB
+    vector_store = create_vector_store()
+
+    # Prepare document data
+    texts = [chunk.page_content for chunk in chunks]
+    metadatas = [chunk.metadata for chunk in chunks]
+
+    # Create unique IDs
+    ids = [
+        f"cloudrun-chunk-{i}"
+        for i in range(len(chunks))
+    ]
+
+    # Insert or update documents
+    vector_store._collection.upsert(
+        ids=ids,
+        embeddings=vectors,
+        documents=texts,
+        metadatas=metadatas
+    )
+
+    return vector_store
 
 load_dotenv()
 
@@ -24,7 +54,7 @@ def create_vector_store():
 
     return vector_store
 
-from ingestion.embeddings import create_embeddings
+
 
 
 def initialize_vector_store():
